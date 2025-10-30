@@ -1,0 +1,16 @@
+@model Models.Entities.Order
+@{
+    ViewData["Title"] = "Order Confirmation";
+}
+<div class="container py-4">
+    <h1 class="mb-3">Thank you! Your order is confirmed.</h1>
+    <div class="card">
+        <div class="card-body">
+            <p><strong>Order #:</strong> @Model.OrderNumber</p>
+            <p><strong>Date:</strong> @Model.OrderDate.ToString("g")</p>
+            <p><strong>Total:</strong> @Model.TotalAmount.ToString("C")</p>
+            <p><strong>Status:</strong> @Model.Status</p>
+        </div>
+    </div>
+    <a asp-controller="Products" asp-action="Index" class="btn btn-primary mt-3">Continue Shopping</a>
+</div>

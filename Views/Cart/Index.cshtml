@@ -1,0 +1,66 @@
+@model Models.ViewModels.CartViewModel
+@{
+    ViewData["Title"] = "Your Cart";
+}
+<div class="container py-4">
+    <h1 class="mb-3">Your Cart</h1>
+
+    @if (!Model.Items.Any())
+    {
+        <div class="alert alert-info">Your cart is empty.</div>
+    }
+    else
+    {
+        <form asp-action="Clear" method="post" class="mb-3">
+            <button class="btn btn-outline-danger" type="submit">Clear Cart</button>
+        </form>
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Product</th>
+                        <th class="text-end">Unit Price</th>
+                        <th class="text-center">Qty</th>
+                        <th class="text-end">Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var i in Model.Items)
+                    {
+                        <tr>
+                            <td style="width: 72px;"><img src="@i.ImageUrl" class="img-thumbnail" style="width:64px;height:64px;object-fit:cover" /></td>
+                            <td>@i.Name</td>
+                            <td class="text-end">@i.UnitPrice.ToString("C")</td>
+                            <td class="text-center" style="width: 160px;">
+                                <form asp-action="Update" method="post" class="d-inline">
+                                    <input type="hidden" name="id" value="@i.ProductId" />
+                                    <input type="number" name="qty" value="@i.Quantity" min="0" class="form-control d-inline-block" style="width:80px" />
+                                    <button class="btn btn-sm btn-secondary" type="submit">Update</button>
+                                </form>
+                            </td>
+                            <td class="text-end">@i.Subtotal.ToString("C")</td>
+                            <td>
+                                <form asp-action="Remove" method="post">
+                                    <input type="hidden" name="id" value="@i.ProductId" />
+                                    <button class="btn btn-sm btn-outline-danger" type="submit">Remove</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="4" class="text-end">Total</th>
+                        <th class="text-end">@Model.Total.ToString("C")</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="text-end">
+            <a asp-controller="Checkout" asp-action="Index" class="btn btn-primary btn-lg">Proceed to Checkout</a>
+        </div>
+    }
+</div>
