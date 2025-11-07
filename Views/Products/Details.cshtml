@@ -1,11 +1,18 @@
 @model Models.Entities.Product
 @{
     ViewData["Title"] = Model.Name;
+    var imgSrc = string.IsNullOrWhiteSpace(Model.ImageUrl)
+        ? Url.Content("~/images/products/placeholder.svg")
+        : (Model.ImageUrl.StartsWith("http", StringComparison.OrdinalIgnoreCase)
+            ? Model.ImageUrl
+            : Url.Content(Model.ImageUrl.StartsWith("~") || Model.ImageUrl.StartsWith("/")
+                ? Model.ImageUrl
+                : $"~/images/products/{Model.ImageUrl}"));
 }
 <div class="container py-4">
     <div class="row g-4">
         <div class="col-md-6">
-            <img src="@Model.ImageUrl" alt="@Model.Name" class="img-fluid rounded shadow" />
+            <img src="@imgSrc" asp-append-version="true" alt="@Model.Name" class="img-fluid rounded shadow" />
         </div>
         <div class="col-md-6">
             <h1 class="h3">@Model.Name</h1>

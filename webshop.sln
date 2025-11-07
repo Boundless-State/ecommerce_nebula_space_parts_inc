@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "..\Models\Models.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "..\Services\Services.csproj", "{769C8AA7-4589-4DA5-B0C4-3349FCB31790}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "..\Infrastructure\Infrastructure.csproj", "{C23263AA-F845-4DC2-B1D1-9B3DFC7CAAB8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "..\UnitTests\UnitTests.csproj", "{C5FF2B9A-3B80-4B27-A119-92CECA3D4664}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "..\IntegrationTests\IntegrationTests.csproj", "{13F11101-CE2D-4997-A071-99138A530C1B}"
@@ -39,10 +37,6 @@ Global
 		{769C8AA7-4589-4DA5-B0C4-3349FCB31790}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{769C8AA7-4589-4DA5-B0C4-3349FCB31790}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{769C8AA7-4589-4DA5-B0C4-3349FCB31790}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C23263AA-F845-4DC2-B1D1-9B3DFC7CAAB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C23263AA-F845-4DC2-B1D1-9B3DFC7CAAB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C23263AA-F845-4DC2-B1D1-9B3DFC7CAAB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C23263AA-F845-4DC2-B1D1-9B3DFC7CAAB8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C5FF2B9A-3B80-4B27-A119-92CECA3D4664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C5FF2B9A-3B80-4B27-A119-92CECA3D4664}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5FF2B9A-3B80-4B27-A119-92CECA3D4664}.Release|Any CPU.ActiveCfg = Release|Any CPU

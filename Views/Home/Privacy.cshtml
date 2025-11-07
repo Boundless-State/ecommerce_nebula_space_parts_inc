@@ -1,6 +1,110 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "About Us";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<style>
+    /* Ensure text visibility on About page */
+    .about-content p,
+    .about-content .lead {
+        color: var(--text-primary) !important;
+    }
+    
+    .about-content strong {
+        color: var(--primary-cyan) !important;
+    }
+    
+    .about-content em {
+        color: var(--text-secondary) !important;
+    }
+    
+    /* Make specific story paragraphs cyan */
+    .about-story {
+        color: var(--primary-cyan) !important;
+    }
+</style>
+
+<div class="container py-4 about-content">
+    <!-- About Hero Card -->
+    <div class="card mb-4 shadow-lg border-0" style="background: rgba(20, 25, 34, 0.65); backdrop-filter: blur(8px);">
+        <div class="card-body p-4 p-lg-5">
+            <h1 class="display-5 mb-4">About Nebula Space Parts Inc.</h1>
+            
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+                    <img src="@Url.Content("~/images/about/glork.png")" 
+                         alt="Glork, CEO of Nebula Space Parts Inc." 
+                         class="img-fluid rounded shadow-lg" 
+                         style="border: 2px solid var(--primary-cyan); max-width: 50%;"
+                         asp-append-version="true" 
+                         onerror="this.style.display='none';" />
+                </div>
+                
+                <div class="col-12 col-md-6">
+                    <p class="lead mb-3 about-story">
+                        Founded in <strong>2261</strong>, Nebula Space Parts Inc. began as a small interstellar workshop orbiting the trade moon Zyrath-9, right as the spacecraft renaissance reshaped the galaxy. What started as a handful of engineers repairing freighters in microgravity soon grew into the galaxy's most trusted supplier of premium-grade spacecraft components.
+                    </p>
+                    
+                    <p class="about-story">
+                        At the heart of Nebula's success is <strong>Glork</strong>, its visionary CEO from the planet Galak, nestled deep within the Crab Nebula. Known for his calm presence and meticulous craftsmanship, Glork transformed Nebula Space Parts from a frontier venture into a corporate powerhouse. His belief is simple:
+                    </p>
+                    
+                    <blockquote class="blockquote text-center my-4 p-3" style="background: rgba(0, 217, 255, 0.1); border-left: 4px solid var(--primary-cyan);">
+                        <p class="mb-0 fst-italic text-primary">"Precision is the bridge between survival and stardust."</p>
+                        <footer class="blockquote-footer mt-2 text-secondary">Glork, CEO</footer>
+                    </blockquote>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-12">
+                    <p>
+                        Nebula's parts now fuel trade routes across every known sector — from the <strong>Core Systems</strong> to the <strong>Outer Colonies</strong> — ensuring that freighters, exploration cruisers, and defense fleets alike reach their destinations safely. Each component, from the <em>Quantum Flux Drive MK-VII</em> to the <em>Solar Sail Energy Collector</em>, carries the same signature quality that has defined the Nebula brand for centuries.
+                    </p>
+                    
+                    <p class="mb-4">
+                        And in every docking bay, captains and engineers alike echo the same advice:
+                    </p>
+                    
+                    <div class="text-center p-4" style="background: rgba(0, 217, 255, 0.15); border-radius: 12px;">
+                        <h3 class="display-6 mb-0 text-primary" style="text-shadow: 0 0 20px var(--primary-cyan-glow);">
+                            "If it's from Glork… you can trust it to bring you home."
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Additional Info Cards -->
+    <div class="row g-4 mt-2">
+        <div class="col-12 col-md-4">
+            <div class="card h-100 shadow" style="background: rgba(20, 25, 34, 0.65); backdrop-filter: blur(8px);">
+                <div class="card-body text-center">
+                    <i class="bi bi-stars display-4 text-primary mb-3"></i>
+                    <h5 class="card-title text-primary">200+ Years</h5>
+                    <p class="card-text" style="color: var(--text-secondary) !important;">Of excellence in spacecraft engineering</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-12 col-md-4">
+            <div class="card h-100 shadow" style="background: rgba(20, 25, 34, 0.65); backdrop-filter: blur(8px);">
+                <div class="card-body text-center">
+                    <i class="bi bi-globe display-4 text-primary mb-3"></i>
+                    <h5 class="card-title text-primary">Galactic Reach</h5>
+                    <p class="card-text" style="color: var(--text-secondary) !important;">Serving every sector from Core to Colonies</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-12 col-md-4">
+            <div class="card h-100 shadow" style="background: rgba(20, 25, 34, 0.65); backdrop-filter: blur(8px);">
+                <div class="card-body text-center">
+                    <i class="bi bi-shield-check display-4 text-primary mb-3"></i>
+                    <h5 class="card-title text-primary">Trusted Quality</h5>
+                    <p class="card-text" style="color: var(--text-secondary) !important;">Premium components for safe journeys</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
