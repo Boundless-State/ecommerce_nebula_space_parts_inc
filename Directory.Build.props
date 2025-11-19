@@ -1,0 +1,20 @@
+<Project>
+  <PropertyGroup>
+    <!-- Limit coverage scope to core executable logic -->
+    <Include>[Services]*,[webshopAPP]*</Include>
+
+    <!-- Default settings for all projects when collecting coverage via coverlet.msbuild -->
+    <CollectCoverage>true</CollectCoverage>
+    <CoverletOutputFormat>cobertura</CoverletOutputFormat>
+
+    <!-- Exclude boilerplate and non-behavioral code to focus coverage on executable logic -->
+    <Exclude>
+      [webshopAPP]AspNetCore.*;         <!-- Razor generated classes for views -->
+      [webshopAPP]Program;              <!-- host bootstrapping -->
+      [Data]*;                          <!-- exclude DbContext/migrations from denominator -->
+      [Models]*                          <!-- POCO entities and view models -->
+    </Exclude>
+    <ExcludeByAttribute>GeneratedCodeAttribute,CompilerGeneratedAttribute,ExcludeFromCodeCoverageAttribute</ExcludeByAttribute>
+    <ExcludeByFile>**/Migrations/*.cs</ExcludeByFile>
+  </PropertyGroup>
+</Project>

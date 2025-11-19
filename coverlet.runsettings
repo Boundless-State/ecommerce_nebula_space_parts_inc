@@ -1,0 +1,23 @@
+{
+  "coverlet.msbuild": {
+    "include": [
+      "[Models]*",
+      "[Data]*",
+      "[Services]*",
+      "[webshopAPP]*"
+    ],
+    "exclude": [
+      "[*.Tests]*",
+      "[*]*Program",
+      "[*]*.Migrations.*"
+    ],
+    "excludeByAttribute": [
+      "Obsolete",
+      "GeneratedCode",
+      "CompilerGenerated"
+    ],
+    "excludeByFile": [
+      "**/Migrations/*.cs"
+    ]
+  }
+}

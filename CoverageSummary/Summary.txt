@@ -1,0 +1,48 @@
+Summary
+  Generated on: 2025-11-07 - 11:31:46
+  Coverage date: 2025-11-07 - 11:29:29 - 2025-11-07 - 11:29:51
+  Parser: MultiReport (2x Cobertura)
+  Assemblies: 4
+  Classes: 20
+  Files: 19
+  Line coverage: 95.8%
+  Covered lines: 532
+  Uncovered lines: 23
+  Coverable lines: 555
+  Total lines: 914
+  Branch coverage: 83.3% (50 of 60)
+  Covered branches: 50
+  Total branches: 60
+  Method coverage: 96% (96 of 100)
+  Full method coverage: 94% (94 of 100)
+  Covered methods: 96
+  Fully covered methods: 94
+  Total methods: 100
+
+Data                                                100%
+  Data.WebshopDbContext                             100%
+
+Models                                             95.8%
+  Models.Entities.Category                          100%
+  Models.Entities.Order                             100%
+  Models.Entities.OrderItem                         100%
+  Models.Entities.Product                           100%
+  Models.ViewModels.CartViewModel                    50%
+  Models.ViewModels.HomeViewModel                   100%
+  Models.ViewModels.ProductViewModel               87.5%
+
+Services                                            100%
+  Services.Implementations.CartService              100%
+  Services.Implementations.MockPaymentProvider      100%
+  Services.Implementations.ProductService           100%
+  Services.Interfaces.CartItemDto                   100%
+  Services.Interfaces.PaymentRequest                100%
+  Services.Interfaces.PaymentResult                 100%
+
+webshopAPP                                           89%
+  Program                                          83.3%
+  webshopAI.Controllers.CartController             77.1%
+  webshopAI.Controllers.CheckoutController          100%
+  webshopAI.Controllers.HomeController             78.5%
+  webshopAI.Controllers.ProductsController          100%
+  webshopAI.ViewComponents.CartIconViewComponent    100%
