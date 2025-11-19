@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Playwright browser binaries (large files)
+**/.playwright/
+**/bin/**/playwright/
+**/bin/**/.playwright/
